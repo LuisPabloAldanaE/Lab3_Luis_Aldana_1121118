@@ -1,6 +1,9 @@
 #include "Auxiliar.h"
 #include "Nodo.h"
 #include "G1.h"
+#include "G2.h"
+#include "G3.h"
+
 
 using namespace System;
 Nodo* InicioA = NULL;

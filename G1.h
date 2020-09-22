@@ -1,5 +1,6 @@
 #pragma once
 #include "Nodo.h"
+#include "Auxiliar.h"
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>

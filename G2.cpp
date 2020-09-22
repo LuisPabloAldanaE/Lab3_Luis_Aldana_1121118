@@ -6,7 +6,7 @@ using namespace System;
 Nodo* Inicio2 = NULL;
 Nodo* Fin2 = NULL;
 Nodo* aux2 = NULL;
-Auxiliar* Aux = new Auxiliar();
+Auxiliar* Aux2 = new Auxiliar();
 void G2::Eliminar() {
 	while (Inicio2->siguiente != NULL)
 	{
@@ -38,7 +38,7 @@ void G2::Sacar(int Contador) {
 	int vigia = 0;
 	while (vigia != Contador && Inicio2->siguiente != NULL)
 	{
-		Aux->Llenar(Inicio2->valor);
+		Aux2->Llenar(Inicio2->valor);
 		aux2 = Inicio2;
 		Inicio2 = Inicio2->siguiente;
 		delete(aux2);

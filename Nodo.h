@@ -5,7 +5,7 @@ class Nodo
 {
 public:
 	Nodo *siguiente;
-	char valor;
+	int valor;
 
 };
 

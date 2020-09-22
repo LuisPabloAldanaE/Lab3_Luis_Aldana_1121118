@@ -96,10 +96,12 @@ namespace Lab3LuisAldana1121118 {
 	private: System::Void btmEmpezar_Click(System::Object^ sender, System::EventArgs^ e) {
 		G1* Grupo1 = new G1();
 		G2* Grupo2 = new G2();
+		G3* Grupo3 = new G3();
 		//Borra los datos por si quiere volver a jugar.
-		Grupo1->Eliminar();
+		/*Grupo1->Eliminar();
 		Grupo2->Eliminar();
-		int Llenar = 1;
+		Grupo3->Eliminar();*/
+		//int Llenar = 1;
 		int Vector[52];
 		for (int i = 0; i < 52; i++)
 		{
@@ -130,6 +132,28 @@ namespace Lab3LuisAldana1121118 {
 				Vector[random] = 0;
 			}
 		}
+		//Llenar tercer grupo
+		for (int i = 0; i < 3; i++)
+		{
+			random = 1 + rand() % 52;
+			if (Vector[random] == 0)
+			{
+				if (i != 0)
+				{
+					i--;
+				}
+				else
+				{
+					i = 0;
+				}
+			}
+			else
+			{
+				Grupo3->Llenar(Vector[random]);
+				Vector[random] = 0;
+			}
+		}
+
 
 
 		

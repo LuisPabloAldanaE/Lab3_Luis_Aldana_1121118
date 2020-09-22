@@ -136,6 +136,7 @@
     <ClCompile Include="Auxiliar.cpp" />
     <ClCompile Include="G1.cpp" />
     <ClCompile Include="G2.cpp" />
+    <ClCompile Include="G3.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Nodo.cpp" />
   </ItemGroup>
@@ -143,6 +144,7 @@
     <ClInclude Include="Auxiliar.h" />
     <ClInclude Include="G1.h" />
     <ClInclude Include="G2.h" />
+    <ClInclude Include="G3.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
