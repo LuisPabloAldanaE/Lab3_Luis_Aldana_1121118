@@ -3,7 +3,7 @@
 #include "Nodo.h"
 
 using namespace System;
-Nodo* Inicio2 = NULL;
+//Nodo* Inicio2 = NULL;
 Nodo* Fin2 = NULL;
 Nodo* aux2 = NULL;
 Auxiliar* Aux2 = new Auxiliar();

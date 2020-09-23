@@ -4,10 +4,10 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-class G1
+class G6
 {
 public:
-	Nodo* Inicio1 = NULL;
+	Nodo* Inicio6 = NULL;
 	void Llenar(int Valor);
 	void Sacar(int Contador);
 	void Eliminar();

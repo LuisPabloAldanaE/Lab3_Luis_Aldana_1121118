@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -137,6 +137,11 @@
     <ClCompile Include="G1.cpp" />
     <ClCompile Include="G2.cpp" />
     <ClCompile Include="G3.cpp" />
+    <ClCompile Include="G4.cpp" />
+    <ClCompile Include="G5.cpp" />
+    <ClCompile Include="G6.cpp" />
+    <ClCompile Include="G7.cpp" />
+    <ClCompile Include="Mazo.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="Nodo.cpp" />
   </ItemGroup>
@@ -145,6 +150,11 @@
     <ClInclude Include="G1.h" />
     <ClInclude Include="G2.h" />
     <ClInclude Include="G3.h" />
+    <ClInclude Include="G4.h" />
+    <ClInclude Include="G5.h" />
+    <ClInclude Include="G6.h" />
+    <ClInclude Include="G7.h" />
+    <ClInclude Include="Mazo.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

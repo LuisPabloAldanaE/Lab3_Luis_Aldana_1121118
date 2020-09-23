@@ -2,6 +2,12 @@
 #include "Auxiliar.h"
 #include "G1.h"
 #include "G2.h"
+#include "G3.h"
+#include "G4.h"
+#include "G5.h"
+#include "G6.h"
+#include "G7.h"
+#include "Mazo.h"
 #include <iostream>
 
 
@@ -97,10 +103,13 @@ namespace Lab3LuisAldana1121118 {
 		G1* Grupo1 = new G1();
 		G2* Grupo2 = new G2();
 		G3* Grupo3 = new G3();
-		//Borra los datos por si quiere volver a jugar.
-		/*Grupo1->Eliminar();
-		Grupo2->Eliminar();
-		Grupo3->Eliminar();*/
+		G4* Grupo4 = new G4();
+		G5* Grupo5 = new G5();
+		G6* Grupo6 = new G6();
+		G7* Grupo7 = new G7();
+		Mazo* GrupoM = new Mazo();
+		Auxiliar* Auxi = new Auxiliar();
+		
 		//int Llenar = 1;
 		int Vector[52];
 		for (int i = 0; i < 52; i++)
@@ -153,8 +162,101 @@ namespace Lab3LuisAldana1121118 {
 				Vector[random] = 0;
 			}
 		}
+		//Llenar cuarto grupo
+		for (int i = 0; i < 4; i++)
+		{
+			random = 1 + rand() % 52;
+			if (Vector[random] == 0)
+			{
+				if (i != 0)
+				{
+					i--;
+				}
+				else
+				{
+					i = 0;
+				}
+			}
+			else
+			{
+				Grupo4->Llenar(Vector[random]);
+				Vector[random] = 0;
+			}
+		}
+		//Llenar quinto grupo
+		for (int i = 0; i < 5; i++)
+		{
+			random = 1 + rand() % 52;
+			if (Vector[random] == 0)
+			{
+				if (i != 0)
+				{
+					i--;
+				}
+				else
+				{
+					i = 0;
+				}
+			}
+			else
+			{
+				Grupo5->Llenar(Vector[random]);
+				Vector[random] = 0;
+			}
+		}
+		//Llenar sexto grupo
+		for (int i = 0; i < 6; i++)
+		{
+			random = 1 + rand() % 52;
+			if (Vector[random] == 0)
+			{
+				if (i != 0)
+				{
+					i--;
+				}
+				else
+				{
+					i = 0;
+				}
+			}
+			else
+			{
+				Grupo6->Llenar(Vector[random]);
+				Vector[random] = 0;
+			}
+		}
+		//Llenar septimo grupo
+		for (int i = 0; i < 7; i++)
+		{
+			random = 1 + rand() % 52;
+			if (Vector[random] == 0)
+			{
+				if (i != 0)
+				{
+					i--;
+				}
+				else
+				{
+					i = 0;
+				}
+			}
+			else
+			{
+				Grupo7->Llenar(Vector[random]);
+				Vector[random] = 0;
+			}
+		}
+		//Llenar el mazo con las cartas restantes.
+		for (int i = 0; i < 52; i++)
+		{
+			if (Vector[i] != 0)
+			{
+				GrupoM->Llenar(Vector[i]);
 
-
+			}
+		}
+		//Mostrar los valores
+		
 
 		
 

@@ -7,7 +7,7 @@
 class G3
 {
 public:
-	Nodo* Inicio;
+	Nodo* Inicio3 = NULL;
 	void Llenar(int Valor);
 	void Sacar(int Contador);
 	void Eliminar();

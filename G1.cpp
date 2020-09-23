@@ -3,13 +3,15 @@
 #include "Nodo.h"
 
 using namespace System;
-Nodo* Inicio1 = NULL;
+//Nodo* Inicio1 = NULL;
 Nodo* Fin = NULL;
 Nodo* aux = NULL;
+
 Auxiliar* Aux1 = new Auxiliar();
 void G1::Eliminar() {
 	while (Inicio1->siguiente != NULL)
 	{
+		
 		aux = Inicio1;
 		Inicio1 = Inicio1->siguiente;
 		delete(aux);

@@ -4,12 +4,12 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-class G1
+class Mazo
 {
 public:
-	Nodo* Inicio1 = NULL;
+	Nodo* InicioM = NULL;
 	void Llenar(int Valor);
-	void Sacar(int Contador);
+	void Sacar();
 	void Eliminar();
 };
 
