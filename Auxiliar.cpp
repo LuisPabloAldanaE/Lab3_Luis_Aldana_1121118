@@ -12,7 +12,6 @@
 
 
 using namespace System;
-//Nodo* InicioA = NULL;
 Nodo* FinA = NULL;
 Nodo* auxA = NULL;
 G1* AuxG1 = new G1();

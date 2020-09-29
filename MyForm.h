@@ -26,6 +26,15 @@ namespace Lab3LuisAldana1121118 {
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
 	public:
+		G1* Grupo1 = new G1();
+		G2* Grupo2 = new G2();
+		G3* Grupo3 = new G3();
+		G4* Grupo4 = new G4();
+		G5* Grupo5 = new G5();
+		G6* Grupo6 = new G6();
+		G7* Grupo7 = new G7();
+		Mazo* GrupoM = new Mazo();
+		Auxiliar* Auxi = new Auxiliar();
 		MyForm(void)
 		{
 			InitializeComponent();
@@ -48,6 +57,10 @@ namespace Lab3LuisAldana1121118 {
 	private: System::Windows::Forms::Label^ label1;
 	protected:
 	private: System::Windows::Forms::Button^ btmEmpezar;
+	private: System::Windows::Forms::Button^ btmMover;
+	private: System::Windows::Forms::TextBox^ txtFuente;
+	private: System::Windows::Forms::TextBox^ txtDestino;
+	private: System::Windows::Forms::TextBox^ txtCantCartas;
 
 	private:
 		/// <summary>
@@ -64,6 +77,10 @@ namespace Lab3LuisAldana1121118 {
 		{
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->btmEmpezar = (gcnew System::Windows::Forms::Button());
+			this->btmMover = (gcnew System::Windows::Forms::Button());
+			this->txtFuente = (gcnew System::Windows::Forms::TextBox());
+			this->txtDestino = (gcnew System::Windows::Forms::TextBox());
+			this->txtCantCartas = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -85,11 +102,46 @@ namespace Lab3LuisAldana1121118 {
 			this->btmEmpezar->UseVisualStyleBackColor = true;
 			this->btmEmpezar->Click += gcnew System::EventHandler(this, &MyForm::btmEmpezar_Click);
 			// 
+			// btmMover
+			// 
+			this->btmMover->Location = System::Drawing::Point(138, 108);
+			this->btmMover->Name = L"btmMover";
+			this->btmMover->Size = System::Drawing::Size(95, 51);
+			this->btmMover->TabIndex = 2;
+			this->btmMover->Text = L"Hacer Movimiento";
+			this->btmMover->UseVisualStyleBackColor = true;
+			this->btmMover->Click += gcnew System::EventHandler(this, &MyForm::btmMover_Click);
+			// 
+			// txtFuente
+			// 
+			this->txtFuente->Location = System::Drawing::Point(16, 94);
+			this->txtFuente->Name = L"txtFuente";
+			this->txtFuente->Size = System::Drawing::Size(100, 22);
+			this->txtFuente->TabIndex = 3;
+			// 
+			// txtDestino
+			// 
+			this->txtDestino->Location = System::Drawing::Point(16, 122);
+			this->txtDestino->Name = L"txtDestino";
+			this->txtDestino->Size = System::Drawing::Size(100, 22);
+			this->txtDestino->TabIndex = 4;
+			// 
+			// txtCantCartas
+			// 
+			this->txtCantCartas->Location = System::Drawing::Point(16, 150);
+			this->txtCantCartas->Name = L"txtCantCartas";
+			this->txtCantCartas->Size = System::Drawing::Size(100, 22);
+			this->txtCantCartas->TabIndex = 5;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(509, 589);
+			this->Controls->Add(this->txtCantCartas);
+			this->Controls->Add(this->txtDestino);
+			this->Controls->Add(this->txtFuente);
+			this->Controls->Add(this->btmMover);
 			this->Controls->Add(this->btmEmpezar);
 			this->Controls->Add(this->label1);
 			this->Name = L"MyForm";
@@ -100,15 +152,7 @@ namespace Lab3LuisAldana1121118 {
 		}
 #pragma endregion
 	private: System::Void btmEmpezar_Click(System::Object^ sender, System::EventArgs^ e) {
-		G1* Grupo1 = new G1();
-		G2* Grupo2 = new G2();
-		G3* Grupo3 = new G3();
-		G4* Grupo4 = new G4();
-		G5* Grupo5 = new G5();
-		G6* Grupo6 = new G6();
-		G7* Grupo7 = new G7();
-		Mazo* GrupoM = new Mazo();
-		Auxiliar* Auxi = new Auxiliar();
+		
 		
 		//int Llenar = 1;
 		int Vector[52];
@@ -257,10 +301,138 @@ namespace Lab3LuisAldana1121118 {
 		}
 		//Mostrar los valores
 		
+	}
 
-		
-
+	private: System::Void btmMover_Click(System::Object^ sender, System::EventArgs^ e) {
+		int OpciónF = VerOpcionF();
+		int OpciónD = VerOpcionD();
+		int CantidadCartas = Convert::ToInt16(txtCantCartas->Text);
+		switch (OpciónF)
+		{
+		case 1:
+			Grupo1->Sacar(CantidadCartas);
+			break;
+		case 2:
+			Grupo2->Sacar(CantidadCartas);
+			break;
+		case 3:
+			Grupo3->Sacar(CantidadCartas);
+			break;
+		case 4:
+			Grupo4->Sacar(CantidadCartas);
+			break;
+		case 5:
+			Grupo5->Sacar(CantidadCartas);
+			break;
+		case 6:
+			Grupo6->Sacar(CantidadCartas);
+			break;
+		case 7:
+			Grupo7->Sacar(CantidadCartas);
+			break;
+		case 8:
+			GrupoM->Sacar();
+			break;
+		default:
+			break;
+		}
+		switch (OpciónD)
+		{
+		case 1:
+			Auxi->Sacar();
+			break;
+		case 2:
+			Auxi->Sacar();
+			break;
+		case 3:
+			Auxi->Sacar();
+			break;
+		case 4:
+			Auxi->Sacar();
+			break;
+		case 5:
+			Auxi->Sacar();
+			break;
+		case 6:
+			Auxi->Sacar();
+			break;
+		case 7:
+			Auxi->Sacar();
+			break;
+		default:
+			break;
+		}
 		
 	}
-	};
+
+	int VerOpcionF() {
+		int opción = 0;
+		if (txtFuente->Text == "G1")
+		{
+			opción = 1;
+		}
+		if (txtFuente->Text == "G2")
+		{
+			opción = 2;
+		}
+		if (txtFuente->Text == "G3")
+		{
+			opción = 3;
+		}
+		if (txtFuente->Text == "G4")
+		{
+			opción = 4;
+		}
+		if (txtFuente->Text == "G5")
+		{
+			opción = 5;
+		}
+		if (txtFuente->Text == "G6")
+		{
+			opción = 6;
+		}
+		if (txtFuente->Text == "G7")
+		{
+			opción = 7;
+		}
+		if (txtFuente->Text == "Mazo")
+		{
+			opción = 8;
+		}
+		return opción;
+	}
+
+	int VerOpcionD() {
+		int opción = 0;
+		if (txtDestino->Text == "G1")
+		{
+			opción = 1;
+		}
+		if (txtDestino->Text == "G2")
+		{
+			opción = 2;
+		}
+		if (txtDestino->Text == "G3")
+		{
+			opción = 3;
+		}
+		if (txtDestino->Text == "G4")
+		{
+			opción = 4;
+		}
+		if (txtDestino->Text == "G5")
+		{
+			opción = 5;
+		}
+		if (txtDestino->Text == "G6")
+		{
+			opción = 6;
+		}
+		if (txtDestino->Text == "G7")
+		{
+			opción = 7;
+		}
+		return opción;
+	}
+};
 }
