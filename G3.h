@@ -8,8 +8,9 @@ class G3
 {
 public:
 	Nodo* Inicio3 = NULL;
+	int Destino3;
 	void Llenar(int Valor);
-	void Sacar(int Contador);
+	void Sacar(int Contador, int Vect[15]);
 	void Eliminar();
 };
 

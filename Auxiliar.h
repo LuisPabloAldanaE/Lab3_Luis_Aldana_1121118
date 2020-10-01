@@ -16,7 +16,7 @@ class Auxiliar
 public:
 	Nodo* InicioA = NULL;
 	char Fuente;
-	char Destino;
+	int Destino;
 	void Llenar(int Valor);
 	void Sacar();
 	void Eliminar();

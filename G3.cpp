@@ -34,11 +34,12 @@ void G3::Llenar(int Valor) {
 	}
 	Fin3->siguiente = NULL;
 }
-void G3::Sacar(int Contador) {
+void G3::Sacar(int Contador, int Vect[15]){
 	int vigia = 0;
 	while (vigia != Contador && Inicio3->siguiente != NULL)
 	{
 		Aux3->Llenar(Inicio3->valor);
+		Vect[vigia] = Inicio3->valor;
 		aux3 = Inicio3;
 		Inicio3 = Inicio3->siguiente;
 		delete(aux3);

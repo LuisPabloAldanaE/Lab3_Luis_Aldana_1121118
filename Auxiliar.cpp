@@ -43,7 +43,7 @@ void Auxiliar::Llenar(int Valor) {
 void Auxiliar::Sacar() {
 	while (InicioA->siguiente != NULL)
 	{
-		if (Destino == '1')
+		if (Destino == 1)
 		{
 			AuxG1->Llenar(InicioA->valor);
 			auxA = InicioA;
@@ -51,7 +51,7 @@ void Auxiliar::Sacar() {
 			delete(auxA);
 			
 		}
-		if (Destino == '2')
+		if (Destino == 2)
 		{
 			AuxG2->Llenar(InicioA->valor);
 			auxA = InicioA;
@@ -59,7 +59,7 @@ void Auxiliar::Sacar() {
 			delete(auxA);
 
 		}
-		if (Destino == '3')
+		if (Destino == 3)
 		{
 			AuxG3->Llenar(InicioA->valor);
 			auxA = InicioA;
@@ -67,7 +67,7 @@ void Auxiliar::Sacar() {
 			delete(auxA);
 
 		}
-		if (Destino == '4')
+		if (Destino == 4)
 		{
 			AuxG4->Llenar(InicioA->valor);
 			auxA = InicioA;
@@ -75,7 +75,7 @@ void Auxiliar::Sacar() {
 			delete(auxA);
 
 		}
-		if (Destino == '5')
+		if (Destino == 5)
 		{
 			AuxG5->Llenar(InicioA->valor);
 			auxA = InicioA;
@@ -83,7 +83,7 @@ void Auxiliar::Sacar() {
 			delete(auxA);
 
 		}
-		if (Destino == '6')
+		if (Destino == 6)
 		{
 			AuxG6->Llenar(InicioA->valor);
 			auxA = InicioA;
@@ -91,7 +91,7 @@ void Auxiliar::Sacar() {
 			delete(auxA);
 
 		}
-		if (Destino == '7')
+		if (Destino == 7)
 		{
 			AuxG7->Llenar(InicioA->valor);
 			auxA = InicioA;

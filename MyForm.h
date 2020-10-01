@@ -304,6 +304,7 @@ namespace Lab3LuisAldana1121118 {
 	}
 
 	private: System::Void btmMover_Click(System::Object^ sender, System::EventArgs^ e) {
+		int VecAux[15];
 		int OpciónF = VerOpcionF();
 		int OpciónD = VerOpcionD();
 		int CantidadCartas = Convert::ToInt16(txtCantCartas->Text);
@@ -311,58 +312,114 @@ namespace Lab3LuisAldana1121118 {
 		{
 		case 1:
 			Grupo1->Sacar(CantidadCartas);
+			Llenar(VecAux, OpciónD, CantidadCartas);
 			break;
 		case 2:
 			Grupo2->Sacar(CantidadCartas);
+			Llenar(VecAux, OpciónD, CantidadCartas);
 			break;
 		case 3:
-			Grupo3->Sacar(CantidadCartas);
+			Grupo3->Sacar(CantidadCartas, VecAux);
+			Llenar(VecAux, OpciónD, CantidadCartas);
 			break;
 		case 4:
 			Grupo4->Sacar(CantidadCartas);
+			Llenar(VecAux, OpciónD, CantidadCartas);
 			break;
 		case 5:
 			Grupo5->Sacar(CantidadCartas);
+			Llenar(VecAux, OpciónD, CantidadCartas);
 			break;
 		case 6:
 			Grupo6->Sacar(CantidadCartas);
+			Llenar(VecAux, OpciónD, CantidadCartas);
 			break;
 		case 7:
 			Grupo7->Sacar(CantidadCartas);
+			Llenar(VecAux, OpciónD, CantidadCartas);
 			break;
 		case 8:
 			GrupoM->Sacar();
-			break;
-		default:
-			break;
-		}
-		switch (OpciónD)
-		{
-		case 1:
-			Auxi->Sacar();
-			break;
-		case 2:
-			Auxi->Sacar();
-			break;
-		case 3:
-			Auxi->Sacar();
-			break;
-		case 4:
-			Auxi->Sacar();
-			break;
-		case 5:
-			Auxi->Sacar();
-			break;
-		case 6:
-			Auxi->Sacar();
-			break;
-		case 7:
-			Auxi->Sacar();
+			Llenar(VecAux, OpciónD, CantidadCartas);
 			break;
 		default:
 			break;
 		}
 		
+	}
+
+	void Llenar(int Vec[15], int destino, int Cont) {
+		int i = 0;
+		if (destino == 1)
+		{
+			while (Cont != 0)
+			{
+				Grupo1->Llenar(Vec[i]);
+				Vec[i] = 0;
+				i++;
+				Cont--;
+			}
+		}
+		if (destino == 2)
+		{
+			while (Cont != 0)
+			{
+				Grupo2->Llenar(Vec[i]);
+				Vec[i] = 0;
+				i++;
+				Cont--;
+			}
+		}
+		if (destino == 3)
+		{
+			while (Cont != 0)
+			{
+				Grupo3->Llenar(Vec[i]);
+				Vec[i] = 0;
+				i++;
+				Cont--;
+			}
+		}
+		if (destino == 4)
+		{
+			while (Cont != 0)
+			{
+				Grupo4->Llenar(Vec[i]);
+				Vec[i] = 0;
+				i++;
+				Cont--;
+			}
+		}
+		if (destino == 5)
+		{
+			while (Cont != 0)
+			{
+				Grupo5->Llenar(Vec[i]);
+				Vec[i] = 0;
+				i++;
+				Cont--;
+			}
+		}
+		if (destino == 6)
+		{
+			while (Cont != 0)
+			{
+				Grupo6->Llenar(Vec[i]);
+				Vec[i] = 0;
+				i++;
+				Cont--;
+			}
+		}
+		if (destino == 7)
+		{
+			while (Cont != 0)
+			{
+				Grupo7->Llenar(Vec[i]);
+				Vec[i] = 0;
+				i++;
+				Cont--;
+			}
+		}
 	}
 
 	int VerOpcionF() {

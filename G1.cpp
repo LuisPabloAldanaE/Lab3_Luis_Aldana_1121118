@@ -11,7 +11,6 @@ Auxiliar* Aux1 = new Auxiliar();
 void G1::Eliminar() {
 	while (Inicio1->siguiente != NULL)
 	{
-		
 		aux = Inicio1;
 		Inicio1 = Inicio1->siguiente;
 		delete(aux);
@@ -40,6 +39,7 @@ void G1::Sacar(int Contador) {
 	int vigia = 0;
 	while (vigia != Contador && Inicio1->siguiente !=NULL)
 	{
+		
 		Aux1->Llenar(Inicio1->valor);
 		aux = Inicio1;
 		Inicio1 = Inicio1->siguiente;
