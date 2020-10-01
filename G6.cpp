@@ -45,3 +45,19 @@ void G6::Sacar(int Contador) {
 		vigia++;
 	}
 }
+int G6::Revisar(int Seguidas) {
+	aux6 = Inicio6->siguiente;
+	while (Inicio6->siguiente != NULL)
+	{
+		if (aux6->valor > Inicio6->valor)
+		{
+			Seguidas++;
+		}
+		if (Inicio6->siguiente != NULL)
+		{
+			Inicio6 = Inicio6->siguiente;
+			aux6 = Inicio6->siguiente;
+		}
+	}
+	return Seguidas;
+}

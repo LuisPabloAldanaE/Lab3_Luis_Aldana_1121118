@@ -45,3 +45,21 @@ void G5::Sacar(int Contador) {
 		vigia++;
 	}
 }
+int G5::Revisar(int Seguidas) {
+	int Cont = 0;
+	aux5 = Inicio5->siguiente;
+	while (Inicio5->siguiente != NULL)
+	{
+		Cont = aux5->valor - Inicio5->valor;
+		if (Cont == 1)
+		{
+			Seguidas++;
+		}
+		if (Inicio5->siguiente != NULL)
+		{
+			Inicio5 = Inicio5->siguiente;
+			aux5 = Inicio5->siguiente;
+		}
+	}
+	return Seguidas;
+}

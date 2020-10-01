@@ -4,6 +4,7 @@
 
 using namespace System;
 //Nodo* Inicio3 = NULL;
+
 Nodo* Fin3 = NULL;
 Nodo* aux3 = NULL;
 Auxiliar* Aux3 = new Auxiliar();
@@ -45,4 +46,20 @@ void G3::Sacar(int Contador, int Vect[15]){
 		delete(aux3);
 		vigia++;
 	}
+}
+int G3::Revisar(int Seguidas) {
+	aux3 = Inicio3->siguiente;
+	while (Inicio3->siguiente != NULL)
+	{
+		if (aux3->valor > Inicio3->valor)
+		{
+			Seguidas++;
+		}
+		if (Inicio3->siguiente != NULL)
+		{
+			Inicio3 = Inicio3->siguiente;
+			aux3 = Inicio3->siguiente;
+		}
+	}
+	return Seguidas;
 }

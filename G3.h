@@ -12,5 +12,6 @@ public:
 	void Llenar(int Valor);
 	void Sacar(int Contador, int Vect[15]);
 	void Eliminar();
+	int Revisar(int Seguidas);
 };
 

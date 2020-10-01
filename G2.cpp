@@ -45,3 +45,19 @@ void G2::Sacar(int Contador) {
 		vigia++;
 	}
 }
+int G2::Revisar(int Seguidas) {
+	aux2 = Inicio2->siguiente;
+	while (Inicio2->siguiente != NULL)
+	{
+		if (aux2->valor > Inicio2->valor)
+		{
+			Seguidas++;
+		}
+		if (Inicio2->siguiente != NULL)
+		{
+			Inicio2 = Inicio2->siguiente;
+			aux2 = Inicio2->siguiente;
+		}
+	}
+	return Seguidas;
+}

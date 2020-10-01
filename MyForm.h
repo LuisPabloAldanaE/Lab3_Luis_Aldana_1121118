@@ -34,7 +34,27 @@ namespace Lab3LuisAldana1121118 {
 		G6* Grupo6 = new G6();
 		G7* Grupo7 = new G7();
 		Mazo* GrupoM = new Mazo();
-		Auxiliar* Auxi = new Auxiliar();
+	private: System::Windows::Forms::Label^ label2;
+	public:
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::ListBox^ lstG1;
+	private: System::Windows::Forms::ListBox^ lstG2;
+	private: System::Windows::Forms::ListBox^ lstG3;
+	private: System::Windows::Forms::ListBox^ lstG4;
+	private: System::Windows::Forms::ListBox^ lstG6;
+
+
+
+
+
+	private: System::Windows::Forms::ListBox^ lstG5;
+	private: System::Windows::Forms::ListBox^ lstG7;
+
+
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ lblMazo;
+		   Auxiliar* Auxi = new Auxiliar();
 		MyForm(void)
 		{
 			InitializeComponent();
@@ -81,20 +101,32 @@ namespace Lab3LuisAldana1121118 {
 			this->txtFuente = (gcnew System::Windows::Forms::TextBox());
 			this->txtDestino = (gcnew System::Windows::Forms::TextBox());
 			this->txtCantCartas = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->lstG1 = (gcnew System::Windows::Forms::ListBox());
+			this->lstG2 = (gcnew System::Windows::Forms::ListBox());
+			this->lstG3 = (gcnew System::Windows::Forms::ListBox());
+			this->lstG4 = (gcnew System::Windows::Forms::ListBox());
+			this->lstG6 = (gcnew System::Windows::Forms::ListBox());
+			this->lstG5 = (gcnew System::Windows::Forms::ListBox());
+			this->lstG7 = (gcnew System::Windows::Forms::ListBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->lblMazo = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(13, 29);
+			this->label1->Location = System::Drawing::Point(13, 9);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(46, 17);
+			this->label1->Size = System::Drawing::Size(269, 17);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"label1";
+			this->label1->Text = L"Presione el boton para empezar el juego:";
 			// 
 			// btmEmpezar
 			// 
-			this->btmEmpezar->Location = System::Drawing::Point(16, 49);
+			this->btmEmpezar->Location = System::Drawing::Point(12, 29);
 			this->btmEmpezar->Name = L"btmEmpezar";
 			this->btmEmpezar->Size = System::Drawing::Size(75, 29);
 			this->btmEmpezar->TabIndex = 1;
@@ -104,7 +136,8 @@ namespace Lab3LuisAldana1121118 {
 			// 
 			// btmMover
 			// 
-			this->btmMover->Location = System::Drawing::Point(138, 108);
+			this->btmMover->Enabled = false;
+			this->btmMover->Location = System::Drawing::Point(632, 214);
 			this->btmMover->Name = L"btmMover";
 			this->btmMover->Size = System::Drawing::Size(95, 51);
 			this->btmMover->TabIndex = 2;
@@ -114,30 +147,152 @@ namespace Lab3LuisAldana1121118 {
 			// 
 			// txtFuente
 			// 
-			this->txtFuente->Location = System::Drawing::Point(16, 94);
+			this->txtFuente->Enabled = false;
+			this->txtFuente->Location = System::Drawing::Point(515, 200);
 			this->txtFuente->Name = L"txtFuente";
 			this->txtFuente->Size = System::Drawing::Size(100, 22);
 			this->txtFuente->TabIndex = 3;
 			// 
 			// txtDestino
 			// 
-			this->txtDestino->Location = System::Drawing::Point(16, 122);
+			this->txtDestino->Enabled = false;
+			this->txtDestino->Location = System::Drawing::Point(515, 228);
 			this->txtDestino->Name = L"txtDestino";
 			this->txtDestino->Size = System::Drawing::Size(100, 22);
 			this->txtDestino->TabIndex = 4;
 			// 
 			// txtCantCartas
 			// 
-			this->txtCantCartas->Location = System::Drawing::Point(16, 150);
+			this->txtCantCartas->Enabled = false;
+			this->txtCantCartas->Location = System::Drawing::Point(515, 256);
 			this->txtCantCartas->Name = L"txtCantCartas";
 			this->txtCantCartas->Size = System::Drawing::Size(100, 22);
 			this->txtCantCartas->TabIndex = 5;
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(416, 203);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(93, 17);
+			this->label2->TabIndex = 6;
+			this->label2->Text = L"Desde donde";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(448, 231);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(61, 17);
+			this->label3->TabIndex = 7;
+			this->label3->Text = L"A donde";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(380, 259);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(129, 17);
+			this->label4->TabIndex = 8;
+			this->label4->Text = L"Cantidad de Cartas";
+			// 
+			// lstG1
+			// 
+			this->lstG1->FormattingEnabled = true;
+			this->lstG1->ItemHeight = 16;
+			this->lstG1->Location = System::Drawing::Point(25, 197);
+			this->lstG1->Name = L"lstG1";
+			this->lstG1->Size = System::Drawing::Size(41, 228);
+			this->lstG1->TabIndex = 9;
+			// 
+			// lstG2
+			// 
+			this->lstG2->FormattingEnabled = true;
+			this->lstG2->ItemHeight = 16;
+			this->lstG2->Location = System::Drawing::Point(72, 197);
+			this->lstG2->Name = L"lstG2";
+			this->lstG2->Size = System::Drawing::Size(41, 228);
+			this->lstG2->TabIndex = 10;
+			// 
+			// lstG3
+			// 
+			this->lstG3->FormattingEnabled = true;
+			this->lstG3->ItemHeight = 16;
+			this->lstG3->Location = System::Drawing::Point(119, 197);
+			this->lstG3->Name = L"lstG3";
+			this->lstG3->Size = System::Drawing::Size(41, 228);
+			this->lstG3->TabIndex = 11;
+			// 
+			// lstG4
+			// 
+			this->lstG4->FormattingEnabled = true;
+			this->lstG4->ItemHeight = 16;
+			this->lstG4->Location = System::Drawing::Point(166, 197);
+			this->lstG4->Name = L"lstG4";
+			this->lstG4->Size = System::Drawing::Size(41, 228);
+			this->lstG4->TabIndex = 12;
+			// 
+			// lstG6
+			// 
+			this->lstG6->FormattingEnabled = true;
+			this->lstG6->ItemHeight = 16;
+			this->lstG6->Location = System::Drawing::Point(260, 197);
+			this->lstG6->Name = L"lstG6";
+			this->lstG6->Size = System::Drawing::Size(41, 228);
+			this->lstG6->TabIndex = 13;
+			// 
+			// lstG5
+			// 
+			this->lstG5->FormattingEnabled = true;
+			this->lstG5->ItemHeight = 16;
+			this->lstG5->Location = System::Drawing::Point(213, 197);
+			this->lstG5->Name = L"lstG5";
+			this->lstG5->Size = System::Drawing::Size(41, 228);
+			this->lstG5->TabIndex = 14;
+			// 
+			// lstG7
+			// 
+			this->lstG7->FormattingEnabled = true;
+			this->lstG7->ItemHeight = 16;
+			this->lstG7->Location = System::Drawing::Point(307, 197);
+			this->lstG7->Name = L"lstG7";
+			this->lstG7->Size = System::Drawing::Size(41, 228);
+			this->lstG7->TabIndex = 15;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(13, 136);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(46, 17);
+			this->label5->TabIndex = 16;
+			this->label5->Text = L"Mazo:";
+			// 
+			// lblMazo
+			// 
+			this->lblMazo->AutoSize = true;
+			this->lblMazo->Location = System::Drawing::Point(69, 136);
+			this->lblMazo->Name = L"lblMazo";
+			this->lblMazo->Size = System::Drawing::Size(0, 17);
+			this->lblMazo->TabIndex = 17;
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(509, 589);
+			this->ClientSize = System::Drawing::Size(847, 589);
+			this->Controls->Add(this->lblMazo);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->lstG7);
+			this->Controls->Add(this->lstG5);
+			this->Controls->Add(this->lstG6);
+			this->Controls->Add(this->lstG4);
+			this->Controls->Add(this->lstG3);
+			this->Controls->Add(this->lstG2);
+			this->Controls->Add(this->lstG1);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->txtCantCartas);
 			this->Controls->Add(this->txtDestino);
 			this->Controls->Add(this->txtFuente);
@@ -146,6 +301,7 @@ namespace Lab3LuisAldana1121118 {
 			this->Controls->Add(this->label1);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -153,9 +309,12 @@ namespace Lab3LuisAldana1121118 {
 #pragma endregion
 	private: System::Void btmEmpezar_Click(System::Object^ sender, System::EventArgs^ e) {
 		
-		
-		//int Llenar = 1;
+		btmMover->Enabled = true;
+		txtFuente->Enabled = true;
+		txtDestino->Enabled = true;
+		txtCantCartas->Enabled = true;
 		int Vector[52];
+		int Comprobar = 0;
 		for (int i = 0; i < 52; i++)
 		{
 			Vector[i] = i + 1;
@@ -300,14 +459,19 @@ namespace Lab3LuisAldana1121118 {
 			}
 		}
 		//Mostrar los valores
-		
+		Comprobar = Grupo3->Revisar(0);
 	}
 
 	private: System::Void btmMover_Click(System::Object^ sender, System::EventArgs^ e) {
+		int Comprobar = 0;
+		//Vector que sera de apoyo para pasar datos de una pila a otra.
 		int VecAux[15];
+		//Varaibles que contienen la dirección de donde viene y a la que van las cartas.
 		int OpciónF = VerOpcionF();
 		int OpciónD = VerOpcionD();
+		//Variable para obetener la cantidad de cartas que sacaran de la pila.
 		int CantidadCartas = Convert::ToInt16(txtCantCartas->Text);
+		//Switch para ver de donde saldran las cartas y llamar la función que hara el traslado de datos.
 		switch (OpciónF)
 		{
 		case 1:
@@ -345,7 +509,41 @@ namespace Lab3LuisAldana1121118 {
 		default:
 			break;
 		}
-		
+		//Mostrar los datos.
+		//Comprobación por si hay 5 seguidas en alguna pila.
+		Comprobar = Grupo1->Revisar(0);
+		if (Comprobar < 5)
+		{
+			Comprobar = Grupo2->Revisar(0);
+		}
+		if (Comprobar < 5)
+		{
+			Comprobar = Grupo3->Revisar(0);
+		}
+		if (Comprobar < 5)
+		{
+			Comprobar = Grupo4->Revisar(0);
+		}
+		if (Comprobar < 5)
+		{
+			Comprobar = Grupo5->Revisar(0);
+		}
+		if (Comprobar < 5)
+		{
+			Comprobar = Grupo6->Revisar(0);
+		}
+		if (Comprobar < 5)
+		{
+			Comprobar = Grupo7->Revisar(0);
+		}
+		else
+		{
+			btmMover->Enabled = false;
+			txtFuente->Enabled = false;
+			txtDestino->Enabled = false;
+			txtCantCartas->Enabled = false;
+
+		}
 	}
 
 	void Llenar(int Vec[15], int destino, int Cont) {
@@ -490,6 +688,21 @@ namespace Lab3LuisAldana1121118 {
 			opción = 7;
 		}
 		return opción;
+	}
+	void Picas() {
+
+	}
+	void Espadas() {
+
+	}
+	void Diamantes() {
+
+	}
+	void Trebol() {
+
+	}
+	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		
 	}
 };
 }

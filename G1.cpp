@@ -39,11 +39,26 @@ void G1::Sacar(int Contador) {
 	int vigia = 0;
 	while (vigia != Contador && Inicio1->siguiente !=NULL)
 	{
-		
 		Aux1->Llenar(Inicio1->valor);
 		aux = Inicio1;
 		Inicio1 = Inicio1->siguiente;
 		delete(aux);
 		vigia++;
 	}
+}
+int G1::Revisar(int Seguidas) {
+	aux = Inicio1->siguiente;
+	while (Inicio1->siguiente != NULL)
+	{
+		if (aux->valor > Inicio1->valor)
+		{
+			Seguidas++;
+		}
+		if (Inicio1->siguiente != NULL)
+		{
+			Inicio1 = Inicio1->siguiente;
+			aux = Inicio1->siguiente;
+		}
+	}
+	return Seguidas;
 }
